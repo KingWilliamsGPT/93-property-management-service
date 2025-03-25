@@ -384,11 +384,20 @@ footer p.lead{
     min-height: 100vh!important;
 }
 
+.vh-70{
+    min-height: 70vh!important;
+}
+
 section.vh-100{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
+
+.no-resize {
+    resize: none!important; /* Removes the bottom-right resize handle */
+    overflow-y: auto!important; /* Allows vertical scrolling if needed */
+  }
 /*
 element {
   position: absolute;
