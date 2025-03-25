@@ -388,7 +388,7 @@ footer p.lead{
     min-height: 70vh!important;
 }
 
-section.vh-100{
+section{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -398,6 +398,14 @@ section.vh-100{
     resize: none!important; /* Removes the bottom-right resize handle */
     overflow-y: auto!important; /* Allows vertical scrolling if needed */
   }
+
+.footer *{
+    color: white ;
+}
+
+.footer a:hover{
+    color: #ffffffb8!important;
+}
 /*
 element {
   position: absolute;
