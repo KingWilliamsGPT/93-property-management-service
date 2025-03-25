@@ -290,38 +290,62 @@
         </div>
     </section>
 
-    <section class="construction bg-white py-5" style="position: relative; background-image: url('./assets/contruction_site.png'); min-height: 100vh; background-repeat: no-repeat; background-size: cover;">
-        <div class="container">
+    <section class="bg-white py-5" style="position: relative; background-image: url('./assets/contruction_site.png'); min-height: 100vh; background-repeat: no-repeat; background-size: cover;">
+        <div class="container construction" id="construction">
             <div class="info mb-5 mt-5" id="info_1">
                 <div class="info-head">
                     <div class="d-flex justify-content-between" style="padding: 1rem;">
                             <span class="pr-3">Land an property sale</span>
-                            <span><img src="./assets/plus.svg" alt="" style="height: 14px"></span>
+                            <span>
+                                <img src="./assets/plus.svg" alt="" class="plus" style="height: 14px; width: 14px;">
+                                <img src="./assets/minus.svg" alt="" class="minus" style="height: 14px; width: 20px;">
+                            </span>
                     </div>
+                </div>
+                <div class="info-body px-3 p-1 w-100">
+                    <p>We bring your vision to life with top-tier craftsmanship and seamless project execution, ensuring durable and stunning results.</p>
                 </div>
             </div>
             <div class="info mb-5 " id="info_2">
                 <div class="info-head">
                     <div class="d-flex justify-content-between" style="padding: 1rem;">
                             <span class="pr-3">Facility Management</span>
-                            <span><img src="./assets/plus.svg" alt="" style="height: 14px"></span>
+                            <span>
+                                <img src="./assets/plus.svg" alt="" class="plus" style="height: 14px; width: 14px;">
+                                <img src="./assets/minus.svg" alt="" class="minus" style="height: 14px; width: 20px;">
+                            </span>
                     </div>
+                </div>
+                <div class="info-body px-3 p-1 w-100">
+                    <p>We bring your vision to life with top-tier craftsmanship and seamless project execution, ensuring durable and stunning results.</p>
                 </div>
             </div>
             <div class="info mb-5 " id="info_3">
                 <div class="info-head">
                     <div class="d-flex justify-content-between" style="padding: 1rem;">
                             <span class="pr-3">Real Estate Consultancy</span>
-                            <span><img src="./assets/plus.svg" alt="" style="height: 14px"></span>
+                            <span>
+                                <img src="./assets/plus.svg" alt="" class="plus" style="height: 14px; width: 14px;">
+                                <img src="./assets/minus.svg" alt="" class="minus" style="height: 14px; width: 20px;">
+                            </span>
                     </div>
+                </div>
+                <div class="info-body px-3 p-1 w-100">
+                    <p>We bring your vision to life with top-tier craftsmanship and seamless project execution, ensuring durable and stunning results.</p>
                 </div>
             </div>
             <div class="info mb-5 " id="info_4">
                 <div class="info-head">
                     <div class="d-flex justify-content-between" style="padding: 1rem;">
                             <span class="pr-3">Construction & Renovation</span>
-                            <span><img src="./assets/plus.svg" alt="" style="height: 14px"></span>
+                            <span>
+                                <img src="./assets/plus.svg" alt="" class="plus" style="height: 14px; width: 14px;">
+                                <img src="./assets/minus.svg" alt="" class="minus" style="height: 14px; width: 20px;">
+                            </span>
                     </div>
+                </div>
+                <div class="info-body px-3 p-1 w-100">
+                    <p>We bring your vision to life with top-tier craftsmanship and seamless project execution, ensuring durable and stunning results.</p>
                 </div>
             </div>
         </div>
@@ -643,6 +667,16 @@
                 768: { slidesPerView: 2 },  /* 2 slides for tablets */
                 1024: { slidesPerView: 3 }  /* 3 slides for desktops */
             }
+        });
+    </script>
+
+    <script>
+        // for faq items
+        $(document).ready(() => {
+            $('.info').click(function() {
+                $(this).find('.info-head').toggleClass('active');
+                $(this).find('.info-body').slideToggle();
+            });
         });
     </script>
   </body>
