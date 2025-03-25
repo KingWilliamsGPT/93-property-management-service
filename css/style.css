@@ -1,0 +1,462 @@
+
+*{
+/*    font-family: Montserrat;*/
+    color: #0C0C0C;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+/*    font-weight: <weight>;*/
+    font-style: normal;
+    letter-spacing: .02px;
+}
+
+p{
+    color: #979797;
+    font-size: 11px;
+    line-height: 20px;
+}
+
+.bolder-text{
+    font-weight: 600; 
+    color: #262262;
+}
+
+h2 {
+    font-size: 50px;
+    line-height: 72px;
+    font-weight: 600;
+}
+
+h3{
+    font-size: 24px;
+    line-height: 32px;
+	
+}
+h4{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+h5{
+    font-size: 10px;
+    font-weight: 400;
+}
+svg{
+    z-index: 2;
+}
+
+body{
+    overflow-x: hidden !important;
+}
+
+section{
+    width: 100%;
+}
+.bg-dark {
+	background-color: #262262 !important;
+}
+
+.h2-special{
+    font-size: 60px;
+    text-align: left;
+}
+
+.btn{
+    font-size: 16px;
+    z-index: 100!important;
+}
+
+.btn:not(:disabled):not(.disabled).active,
+.btn:not(:disabled):not(.disabled):active,
+.show>.btn.dropdown-toggle {
+  transform: scale(1.06);
+}
+
+.btn-primary{
+    background-color: #fff;
+    color: #0C0C0C;
+    border: 2px solid #0012461A;
+    font-weight: 500;
+}
+
+.btn-primary{
+	font-size: 11px;
+	border-radius: 25px;
+	outline: none;
+	background-color: #F4F8FF;
+}
+.btn-primary:hover {
+  color:#fff;
+  background-color: #262262;
+  border-color: #3e387a;
+}
+.btn-primary.focus,
+.btn-primary:focus {
+  box-shadow: none;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle {
+  color:#fff;
+  background-color: #284359;
+  border-color: #a1acb6;
+}
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.btn-secondary{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    background-color: #262262;
+}
+
+.btn-secondary:hover {
+  color:#fff;
+  background-color:#5a6268;
+  border-color:#545b62
+}
+.btn-secondary.focus,
+.btn-secondary:focus {
+  box-shadow:0 0 0 .2rem rgba(108,117,125,.5)
+}
+
+.hero {
+    min-height: 100vh; /* Full height of the viewport */
+    background-image: 
+        linear-gradient(to bottom, rgb(38, 34, 98, .5), rgb(38, 34, 98, .5)), 
+        url("../assets/bg_person_dream_house.png"); 
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    padding-bottom: 4rem;
+    background-position: 51% 15%;
+    /* background-size: 155%; */
+}
+
+
+.glass-like {
+	background: rgba(255, 255, 255, 0.01);
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+	/* color: #fff; */
+}
+
+
+.testing .bred{
+    border: thin solid red !important;
+}
+
+.testing .byellow{
+    border: thin solid yellow !important;
+}
+
+.testing .bblue{
+    border: thin solid blue !important;
+}
+
+
+.hero .navbar{
+    padding-top: 12px !important;
+}
+
+
+.hero .navbar .container{
+    padding: 0px 122px 0px 56.94px;
+}
+
+.nohero .navbar{
+    padding-top: 12px !important;
+}
+
+.nohero .navbar .container{
+    padding: 0px 122px 0px 56.94px;
+}
+
+.nav-item .nav-link{
+    font-size: 20px ;
+    color: rgba(255, 255, 255, .9);
+    font-weight: 500;
+}
+
+.nav-item.active .nav-link{
+    color: #fff;
+    font-weight: 700;
+}
+
+
+
+.lead-text{
+    margin: 0 3rem;
+    margin-top: 2rem;
+}
+
+
+.lead-text p{
+    color: #fff;
+}
+
+.lead-text p{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    max-width: 637px;
+}
+
+.lead-text p.lead{
+    font-weight: 600;
+    font-size: 55px;
+    line-height: 72px;
+    max-width: 719px;
+}
+
+.card{
+    background-color: #F8FAFF;
+}
+
+.info-cards .col{
+    height: 340px;
+}
+
+.info-cards .card{
+    background-color: white;
+    max-width: 312.55px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.info-cards .card h4{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 32px;
+    letter-spacing: -0.04em;
+}
+
+.info-cards .card p{
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: -0.04em;
+    min-height: 78px;
+    display: block;
+}
+
+.info-cards .card .btn{
+    font-size: 15px;
+    position: absolute;
+}
+
+.info-cards .card svg{
+    position: absolute;
+}
+
+
+.partner-cards{
+
+}
+
+.partner-cards .card{
+/*    height: 540px;*/
+}
+
+.partner-cards .card-img-top{
+    background-size: 50%;
+    background-position: 40% 10%;
+    background-repeat: no-repeat;
+}
+
+.my-container{
+    max-width: 998px !important;
+}
+
+.partner .p-right h3{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.04em;
+}
+
+.partner .p-right p{
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -0.04em;
+}
+
+.partner .p-right .card {
+    background-image: linear-gradient(to bottom, rgba(246, 246, 246, 1), rgba(230, 241, 252, 0.25));
+    background-size: cover; /* Ensure the gradient covers the entire element */
+    background-repeat: no-repeat!important; /* Prevent the gradient from repeating */
+}
+
+
+.contact h3,
+.contact p{
+    color: rgba(246, 246, 246, 1);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.04em;
+}
+
+.contact h3{
+    color: white;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 47px;
+}
+
+
+.contact .inpt {
+    border: none;
+    border-bottom: 0.88px solid #b0b8c1;
+    background: transparent;
+    color: #b0b8c1;
+    outline: none !important;
+}
+
+.contact .inpt option{
+    color: #b0b8c1;
+}
+
+.square-card .link-it{
+    color: #262262 !important;
+    font-weight: 600;
+    font-size: 13px;
+    font-family: Inter, inherit;
+    display: inline-block;
+    position: absolute;
+    z-index: 200;
+}
+
+footer p,
+footer p.lead,
+footer p a{
+    color: #fff;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 6px;
+    letter-spacing: -0.04em;
+    white-space: nowrap;
+}
+
+footer p.lead{
+    font-weight: 600;
+}
+
+#back-to-top {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed position */
+  bottom: 20px; /* Distance from the bottom */
+  right: 20px; /* Distance from the right */
+  z-index: 99; /* Ensure it's above other elements */
+  border: none; /* Remove border */
+  outline: none; /* Remove outline */
+  background-color: #007bff; /* Button background color */
+  color: white; /* Button text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  padding: 15px; /* Padding */
+  border-radius: 50%; /* Circular button */
+  font-size: 18px; /* Font size */
+  transition: opacity 0.3s; /* Smooth fade in/out */
+}
+
+#back-to-top:hover {
+  background-color: #0056b3; /* Darker background on hover */
+}
+
+
+.info{
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.info span{
+    font-size: 11px;
+    font-weight: 500;
+    display: inline-block
+}
+
+/*
+element {
+  position: absolute;
+  left: 658px;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: 0px;
+  margin-left: 520px;
+  margin-bottom: 124px;
+}*/
+
+/*<= sm*/
+@media (max-width:576px) {
+  .lead-text p.lead{
+    font-size: 50px;
+    line-height: 58px;
+  }
+}
+
+
+/*>= sm*/
+@media (min-width:576px) {
+  .lead-text{
+      margin-top: 134px;
+  }
+}
+
+/*>= md*/
+@media (min-width:768px) {
+
+}
+
+/*>= lg*/
+@media (min-width:992px) {
+    .lead-text{
+        position: absolute;
+        left: 30px;
+        bottom: 80px;
+    }
+
+    /* .hero .navbar .navbar-collapse{
+        flex-basis: auto!important;
+        flex-grow: 0!important;
+    }
+
+    .nohero .navbar .navbar-collapse{
+        flex-basis: auto!important;
+        flex-grow: 0!important;
+    } */
+}
+
+/*>= xl*/
+@media (min-width:1200px) {
+    .info{
+        display: inline-block;
+        margin: 0;
+    }
+    .constuction .info{
+    }
+    #info_1{
+        position: absolute;
+        left: 343px;
+        top: 137px;
+    }
+    #info_2{
+        position: absolute;
+        left: 856px;
+        top: 85px;
+    }
+    #info_3{
+        position: absolute;
+        left: 646px;
+        top: 428px;
+    }
+    #info_4{
+        position: absolute;
+        left: 164px;
+        top: 399px;
+    }
+}
