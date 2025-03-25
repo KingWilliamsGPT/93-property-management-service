@@ -62,47 +62,157 @@
 
         </style>
 
+
   </head>
 
   <body class="testin bg-dark">
 
     <section class="bg-dark hero" style="position: relative;">
 
-      <nav class="navbar navbar-dark mb-3 p-md-0 glass-like sticky-top">
-        <div class="container-fluid bblue mx-4 mb-3" style="max-width: 100%;">
-          <!-- Brand/Logo -->
-          <a class="navbar-brand byellow p-0" href="/">
-            <img src="./assets/93 property management svg.svg" alt="Logo" style="width: 60px; height: 60px; filter: brightness(0) invert(1); transform: scale(155%);">
-          </a>
+        <style>
+            /* Glassmorphism Blur Effect */
+            .glass-like {
+              backdrop-filter: blur(10px);
+              background: rgba(255, 255, 255, 0.15);
+            }
+          
+            /* Custom Mobile Menu (Right-Side) */
+            .mobile-menu {
+              position: fixed;
+              top: 0;
+              right: -100%;
+              width: 100vw;
+              height: 100vh;
+              background: rgba(255, 255, 255, 0.2);
+              backdrop-filter: blur(20px);
+              box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+              transition: right 0.3s ease-in-out;
+              padding-top: 60px;
+              z-index: 1050;
+              display: flex;
+              flex-direction: column;
+            }
+          
+            /* Full Page Blur Effect */
+            .blur-overlay {
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: rgba(0, 0, 0, 0.3);
+              backdrop-filter: blur(8px);
+              visibility: hidden;
+              opacity: 0;
+              z-index: 1040;
+              transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+            }
+          
+            /* Show Overlay */
+            .show-overlay {
+              visibility: visible;
+              opacity: 1;
+            }
+          
+            /* Show Sidebar */
+            .show-menu {
+              right: 0;
+            }
+          
+            /* Close Button */
+            .close-btn {
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              background: rgba(255, 255, 255, 0.3);
+              border: none;
+              color: black;
+              font-size: 20px;
+              cursor: pointer;
+              border-radius: 50%;
+              width: 35px;
+              height: 35px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              transition: background 0.2s ease-in-out;
+            }
+          
+            .close-btn:hover {
+              background: rgba(255, 255, 255, 0.5);
+            }
 
-          <!-- Hamburger Button for Small Screens -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
-            style="border-radius: 20px; background-color: #f5f5f5d6; padding: 2px 11px; padding-bottom: 4px; letter-spacing: -4%;">
-            <span style="font-size: 13px; line-height: 14px;">Menu</span>
-          </button>
-
-          <!-- Collapsible Menu -->
-          <div class="collapse navbar-collapse bred" id="navbarNav">
-            <ul class="navbar-nav ms-auto"> <!-- ms-auto aligns items to the right -->
-              <li class="nav-item mx-auto active">
+            /*>= sm*/
+            @media (min-width:576px) {
+                .mobile-menu{
+                    width: 75vw;
+                }
+            }            
+          </style>
+          
+          <!-- Navbar -->
+          <nav class="navbar navbar-dark mb-3 p-md-0 glass-like sticky-top">
+            <div class="container-fluid mx-4 mb-3">
+              <!-- Brand/Logo -->
+              <a class="navbar-brand p-0" href="/">
+                <img src="./assets/93 property management svg.svg" alt="Logo" style="width: 60px; height: 60px; filter: brightness(0) invert(1); transform: scale(155%);">
+              </a>
+          
+              <!-- Hamburger Button -->
+              <button class="navbar-toggler" type="button" id="menuToggle" style="border-radius: 20px; background-color: #f5f5f5d6; padding: 2px 11px; padding-bottom: 4px;">
+                <span style="font-size: 13px;">Menu</span>
+              </button>
+            </div>
+          </nav>
+          
+          <!-- Mobile Sidebar Menu -->
+          <div class="mobile-menu" id="mobileNav">
+            <!-- Close Button -->
+            <button class="close-btn" id="closeMenu">&times;</button>
+          
+            <ul class="navbar-nav ps-3 mt-4">
+              <li class="nav-item text-center">
                 <a class="nav-link" href="/">Home</a>
               </li>
-              <li class="nav-item mx-auto">
-                <a class="nav-link" href="./about-us.html">About us</a>
+              <li class="nav-item text-center">
+                <a class="nav-link" href="./about-us.html">About Us</a>
               </li>
-              <li class="nav-item mx-auto">
+              <li class="nav-item text-center">
                 <a class="nav-link" href="#services-section">Our Services</a>
               </li>
-              <!-- <li class="nav-item mx-auto">
-                <a class="nav-link" href="#">Our Blog</a>
-              </li> -->
-              <li class="nav-item mx-auto">
-                    <a href="#form-section" class="btn btn-primary bgreen">Get Started</a>
+              <li class="nav-item text-center">
+                <a href="#form-section" class="btn btn-primary">Get Started</a>
               </li>
             </ul>
           </div>
-        </div>
-      </nav>
+          
+          <!-- Blur Overlay -->
+          <div class="blur-overlay" id="blurOverlay"></div>
+          
+          <!-- JavaScript for Menu Toggle & Close -->
+          <script>
+            const menuToggle = document.getElementById('menuToggle');
+            const closeMenu = document.getElementById('closeMenu');
+            const mobileNav = document.getElementById('mobileNav');
+            const blurOverlay = document.getElementById('blurOverlay');
+          
+            menuToggle.addEventListener('click', () => {
+              mobileNav.classList.add('show-menu');
+              blurOverlay.classList.add('show-overlay');
+            });
+          
+            closeMenu.addEventListener('click', () => {
+              mobileNav.classList.remove('show-menu');
+              blurOverlay.classList.remove('show-overlay');
+            });
+          
+            // Close menu when clicking outside
+            blurOverlay.addEventListener('click', () => {
+              mobileNav.classList.remove('show-menu');
+              blurOverlay.classList.remove('show-overlay');
+            });
+          </script>
+          
 
         <div class="lead-text">
             <p>We believe real estate is more than just property, 
