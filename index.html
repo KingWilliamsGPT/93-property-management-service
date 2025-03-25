@@ -13,15 +13,54 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-        <!-- AOS CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.19/dist/lenis.css">
-    <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="./assets/tolulegal sl-02.ico">
+        
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+            <!-- AOS CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.19/dist/lenis.css">
+        <!-- Custom styles for this template -->
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="icon" type="image/png" href="./assets/tolulegal sl-02.ico">
 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+        <style>
+            .swiper {
+                width: 100%;
+                padding: 20px 0;
+            }
+            .swiper-slide {
+                display: flex;
+                justify-content: center;
+            }
+            .team-bros {
+                border: none;
+                width: 100%;
+                max-width: 300px; /* Ensures uniform card size */
+            }
+            
+        /* Customizing the navigation arrows */
+        .swiper-button-next, .swiper-button-prev {
+            color: #5A5A5A;  /* Change arrow color */
+            background: rgba(0, 0, 0, 0.1);  /* Light background */
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+        }
+
+        /* Add hover effect */
+        .swiper-button-next:hover, .swiper-button-prev:hover {
+            background: rgba(0, 0, 0, 0.3);
+            color: white;
+        }
+
+        /* Make the icons larger */
+        .swiper-button-next::after, .swiper-button-prev::after {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        </style>
 
   </head>
 
@@ -246,6 +285,62 @@
 
     <section class="bg-white">
         <h3 class="text-center mb-5" style="color: #979797; font-weight: bold; font-size: 25px;">Our Management team</h3>
+        <div class="container-fluid">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper pb-4">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="card team-bros bg-white">
+                            <img src="./assets/team_bro3.jpg" class="card-img-top" alt="Team Member" style="width: 100%; height: 345px; object-fit: cover; border-radius: 20px;">
+                            <div class="card-body p-0 m-0 text-center">
+                                <h4 class="mt-4" style="font-weight: 500; color: #5A5A5A;">Yetunda Achalugo</h4>
+                                <h4 style="font-size: 16px; color: #5A5A5A;">VP, Design</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="card team-bros bg-white">
+                            <img src="./assets/team_bro_1.png" class="card-img-top" alt="Team Member" style="width: 100%; height: 345px; object-fit: cover; border-radius: 20px;">
+                            <div class="card-body p-0 m-0 text-center">
+                                <h4 class="mt-4" style="font-weight: 500; color: #5A5A5A;">Yetunda Achalugo</h4>
+                                <h4 style="font-size: 16px; color: #5A5A5A;">VP, Design</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="card team-bros bg-white">
+                            <img src="./assets/team_bro_4.png" class="card-img-top" alt="Team Member" style="width: 100%; height: 345px; object-fit: cover; border-radius: 20px;">
+                            <div class="card-body p-0 m-0 text-center">
+                                <h4 class="mt-4" style="font-weight: 500; color: #5A5A5A;">Yetunda Achalugo</h4>
+                                <h4 style="font-size: 16px; color: #5A5A5A;">VP, Design</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide">
+                        <div class="card team-bros bg-white">
+                            <img src="./assets/team_bro_2.png" class="card-img-top" alt="Team Member" style="width: 100%; height: 345px; object-fit: cover; border-radius: 20px;">
+                            <div class="card-body p-0 m-0 text-center">
+                                <h4 class="mt-4" style="font-weight: 500; color: #5A5A5A;">Yetunda Achalugo</h4>
+                                <h4 style="font-size: 16px; color: #5A5A5A;">VP, Design</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Navigation Controls -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+        
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white">
 
     </section>
 
@@ -358,5 +453,29 @@
     <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
     <script type="text/javascript" src="./js/main.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,  /* Adjust for mobile */
+            spaceBetween: 20,  /* Gap between slides */
+            loop: true,
+            autoplay: {
+                delay: 3000, /* Auto-slide every 3 seconds */
+                disableOnInteraction: false
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+            breakpoints: {
+                768: { slidesPerView: 2 },  /* 2 slides for tablets */
+                1024: { slidesPerView: 3 }  /* 3 slides for desktops */
+            }
+        });
+    </script>
   </body>
 </html>
